@@ -1,0 +1,11 @@
+{
+  "name": "chris-meanapp",
+  "version": "0.0.1",
+  "description": "a mean app",
+  "dependencies": {
+    "angular": "~1.2.15",
+    "angular-resource": "~1.2.15",
+    "angular-route": "~1.2.16"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,19 @@
+{
+    "name": "chris-meanapp",
+    "version": "0.0.1",
+    "description": "a mean app",
+    "engines": {
+        "node": "0.10.20"
+    },
+    "dependencies": {
+        "express": "~3.5.1",
+        "underscore": "~1.6.0",
+        "consolidate": "~0.10.0",
+        "view-helpers": "~0.1.4",
+        "mongoose": "~3.8.8",
+        "connect-mongo": "~0.4.0",
+        "express-load": "git://github.com/vkadam/express-load.git#master"
+    },
+    "devDependencies": {
+    }
+}
