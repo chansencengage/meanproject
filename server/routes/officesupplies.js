@@ -3,15 +3,9 @@
 var officesupplies = require('../controllers/officesupplies');
 
 module.exports = function(app) {
-    app.get('/service/officesupplies', function(req, res) {
-        officesupplies.all(req, res);
-    });
+    app.get('/service/officesupplies', officesupplies.all);
 
-    app.post('/service/officesupplies', function(req, res) {
-        officesupplies.add(req, res);
-    });
+    app.post('/service/officesupplies', officesupplies.add);
 
-    app.post('/service/officesupplies/:id', function(req, res) {
-        officesupplies.update(req, res);
-    });
+    app.post('/service/officesupplies/:id', officesupplies.update);
 };
