@@ -2,9 +2,10 @@
 
 var app = angular.module('officeApp', ['ngRoute', 'ngResource']);
 
-app.config(['$routeProvider', function($routeProvider) {
+app.config(['$routeProvider',
+    function($routeProvider) {
 
-    $routeProvider.
+        $routeProvider.
         when('/', {
             templateUrl: '/views/officesupplies.html',
             controller: 'OfficeSupplies'
@@ -20,4 +21,5 @@ app.config(['$routeProvider', function($routeProvider) {
         otherwise({
             redirectTo: '/'
         });
-}]);
+    }
+]);

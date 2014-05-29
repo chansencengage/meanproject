@@ -13,9 +13,11 @@ exports.add = function(req, res) {
     var officeSupply = new OfficeSuppliesModel(req.body);
 
     officeSupply.save(function(err) {
-        if(err) {
+        if (err) {
             console.log(err);
-            res.send(500, {error: 'Something went wrong'});
+            res.send(500, {
+                error: 'Something went wrong'
+            });
             return;
         }
         res.json(officeSupply._doc);
@@ -26,10 +28,16 @@ exports.update = function(req, res) {
     var params = req.body;
     delete params._id;
 
-    OfficeSuppliesModel.update({_id: new Object(req.params.id)}, params, {upsert:false}, function(err) {
-        if(err) {
+    OfficeSuppliesModel.update({
+        _id: new Object(req.params.id)
+    }, params, {
+        upsert: false
+    }, function(err) {
+        if (err) {
             console.log(err);
-            res.send(500, {error: 'Something went wrong'});
+            res.send(500, {
+                error: 'Something went wrong'
+            });
             return;
         }
 
