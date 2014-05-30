@@ -23,7 +23,8 @@ module.exports = function(config) {
             'client/bower_components/angular-route/angular-route.js',
             'client/bower_components/bootstrap/bootstrap.js',
             'client/bower_components/underscore/underscore.js',
-            'client/js/*.js'
+            'testconfig/jasmine-fixture.min.js',
+            'client/js/**/*.js'
         ],
 
 
@@ -43,7 +44,7 @@ module.exports = function(config) {
             // source files, that you wanna generate coverage for
             // do not include tests or libraries
             // (these files will be instrumented by Istanbul)
-            'client/**/!(*_spec).js': ['coverage']
+            'client/!(bower_compontents)**/!(*_spec).js': ['coverage']
         },
 
         coverageReporter: {
