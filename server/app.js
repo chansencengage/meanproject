@@ -5,7 +5,8 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 var express = require('express'),
     config = require('./config'),
     mongoose = require('mongoose'),
-    expressLoad = require('express-load');
+    expressLoad = require('express-load'),
+    path = require('path');
 
 var db = mongoose.connect(config.dbpath + '/' + config.dbname);
 var app = express();
@@ -14,8 +15,8 @@ var app = express();
 require('./express')(app, db);
 
 // Bootstrap routes
-var modelsPath = __dirname + '\\models';
-var routesPath = __dirname + '\\routes';
+var modelsPath = path.join(__dirname, 'models');
+var routesPath = path.join(__dirname, 'routes');
 expressLoad(modelsPath, {
     extlist: /^(?!.*_spec\.).*\.(js$)/
 }).then(routesPath, {
